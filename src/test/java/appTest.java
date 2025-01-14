@@ -23,7 +23,9 @@ public class appTest {
 
     @Test
     public void testTrianguloValorNegativo(){
-
+    int lado1 = -8, lado2 = 3, lado3 = 3;
+    String resultado = Main.verificarTipoTriangulo(lado1,lado2,lado3);
+    assertEquals("Valor", resultado);
 
     }
 }
