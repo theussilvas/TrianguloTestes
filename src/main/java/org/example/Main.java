@@ -4,14 +4,11 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static String verificarLadosNegativos(int lado1, int lado2, int lado3) {
-        if (lado1 < 0 || lado2 < 0 || lado3 < 0) {
-            return "Erro ao verificar lados negativos";
-        }
-        return "Passou";
-    }
-
     public static String verificarTipoTriangulo(int lado1, int lado2, int lado3) {
+        if (lado1 < 0 || lado2 < 0 || lado3 < 0) {
+            return "O triangulo nao pode ter lados negativos";
+        }
+
         if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
             return "Valor informado nao forma triangulo";
         }
@@ -39,9 +36,6 @@ public class Main {
         int lado3 = Integer.parseInt(valores[2]);
 
         // Verificando e classificando o tipo do triângulo
-        String result = verificarLadosNegativos(lado1, lado2, lado3);
-
-
         String resultado = verificarTipoTriangulo(lado1, lado2, lado3);
 
         System.out.println(resultado);
